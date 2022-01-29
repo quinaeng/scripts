@@ -11,4 +11,4 @@ rem /COMPRESS ファイル転送中にネットワーク圧縮を要求します
 rem /COPY コピーする情報(D=データ、A=属性、T=タイムスタンプ、X=代替データ ストリームをスキップ、S= セキュリティ =NTFS ACL、O= 所有者情報、U= 監査情報)。
 rem /LOG+  ログ ファイルに状態を出力します
 
-robocopy %1 %2 /MIR /MT:%NUMBER_OF_PROCESSORS% /E /COMPRESS /COPY:DATSOU /LOG+:%LOG%
+robocopy %SOURCE% %DESTINATION% /MIR /MT:%NUMBER_OF_PROCESSORS% /E /COMPRESS /COPY:DATSOU /LOG+:%LOG%
