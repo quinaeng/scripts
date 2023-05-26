@@ -24,7 +24,7 @@ do
 
 	  # コメントアウト機能
 	  if [[ $replace_word == \#* ]]; then
-		continue
+      continue
 	  fi
 
       before_word=$(echo $replace_word | cut -d":" -f1)
