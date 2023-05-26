@@ -12,7 +12,7 @@ do
 
   # コメントアウト機能
   if [[ $file_path == \#* ]]; then
-	continue
+  	continue
   fi
 
   # file_listのファイル有無を確認
