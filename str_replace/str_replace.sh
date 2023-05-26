@@ -22,26 +22,26 @@ do
     while read replace_word
     do
 
-	  # コメントアウト機能
-	  if [[ $replace_word == \#* ]]; then
-      continue
-	  fi
+      # コメントアウト機能
+      if [[ $replace_word == \#* ]]; then
+        continue
+	    fi
 
       before_word=$(echo $replace_word | cut -d":" -f1)
       after_word=$(echo $replace_word | cut -d":" -f2)
 
-	  grep -q "$before_word" $file_path
-	  bw_exists=$?
+	    grep -q "$before_word" $file_path
+	    bw_exists=$?
 
       # 文字列を置換する
       sed -i 's|'"$before_word"'|'"$after_word"'|g' $file_path
 
-	  # ログ出力
+	    # ログ出力
       if [ $bw_exists = 0 ]; then
-    	echo "File Path: $file_path" | tee -a result.txt
-    	echo "Before word: $before_word" | tee -a result.txt
-    	echo "After word: $after_word" | tee -a result.txt
-		echo "---" | tee -a result.txt
+        echo "File Path: $file_path" | tee -a result.txt
+        echo "Before word: $before_word" | tee -a result.txt
+        echo "After word: $after_word" | tee -a result.txt
+        echo "---" | tee -a result.txt
       fi
 
     done < $REPLACE_WORD
