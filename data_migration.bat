@@ -2,7 +2,7 @@
 
 set SOURCE="C:\Users\user\Desktop\src"
 set DESTINATION="C:\Users\users\Desktop\dst"
-set LOG="%~dp0data_migration.llog"
+set LOG="%~dp0data_migration.log"
 
 rem /MIR ディレクトリ ツリーをミラー化します (/E および /PURGE と同等)。
 rem /MT  n個のスレッドのマルチスレッド コピーを実行します。
